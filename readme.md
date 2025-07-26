@@ -8,3 +8,4 @@
 6. now install libraries , to create `requirements.txt` and write libraries names inside **requirements.txt** and run command `pip install -r requirements.txt`
 7. create **src folder** and create file `__init__.py`
 8. create `setup.py` file on your main root then write codes to setup and run this command `python setup.py install` to make package. **or** write in **-e .** in requirement.txt file and run command `pip install -r requirements.txt`
+9. create `template.py` file and write code to make folders and files.
