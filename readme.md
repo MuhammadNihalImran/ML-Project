@@ -12,3 +12,7 @@
 10. go to src folder then `logger.py` file and write the code.
 11. In `data_ingestion.py` and get data from **MY SQL** also create **.env** file
 12. now go to `utils.py` file and read data and add in requirement.txt file `python-dotenv`,`mysql-connector-python` , `pymysql`, `scikit-learn` to install
+13. now install dvc `pip install dvc` and aslo run `dvc init` and then delete folder **artifacts** then now push on github and run `python app.py` then run `dvc add artifacts/raw.csv`.
+14. `git checkout` and `git checkout commit_url` and `dvc checkout` and `git checkout main` and `dvc checkout`
+15. if you use jupyter notebook in vscode run `pip install ipykernel`
+16. In dat_tranformer.py file and code

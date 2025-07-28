@@ -1,7 +1,12 @@
 from src.my_project.logger import logging
 from src.my_project.exceptions import CustomException
 from src.my_project.components.data_ingestion import DataIngestion
+
 # from src.my_project.utils.dataclass import DataIngestionConfig
+from src.my_project.components.data_transformation import (
+    DataTransformation,
+    DataTransformationConfig,
+)
 
 import sys
 
@@ -12,8 +17,12 @@ if __name__ == "__main__":
     try:
         data_ingestion = DataIngestion()
         train_data_path, test_data_path = data_ingestion.initiate_data_ingestion()
-        logging.info(f"Train data saved at: {train_data_path}")
-        logging.info(f"Test data saved at: {test_data_path}")
+
+        data_transformation = DataTransformation()
+        data_transformation.initiate_data_transformation(
+            train_data_path, test_data_path
+        )
+
     except Exception as e:
         logging.error(f"An error occurred: {e}")
         raise CustomException(e, sys) from e

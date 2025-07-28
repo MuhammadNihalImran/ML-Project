@@ -24,7 +24,7 @@ class DataIngestion:
 
     def initiate_data_ingestion(self):
         try:
-            df = read_sql_data()
+            df = pd.read_csv(os.path.join("notebook/data", "raw.csv"))
 
             logging.info("reading completed mysql database")
             # Here you would typically connect to your MySQL database and fetch data
